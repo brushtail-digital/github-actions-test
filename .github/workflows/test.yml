@@ -14,6 +14,7 @@ jobs:
           repository: 'coin-or/coinbrew'
       - run: C:/msys64/msys2_shell.cmd -defterm -no-start -c "pacman -Sy --noconfirm wget pkg-config make dos2unix"
       - run: |
+          set PATH=C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\windows\\System32\\OpenSSH\\
           "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/Tools/VsDevCmd.bat"
           C:/msys64/usr/bin/bash -c "./coinbrew fetch Cbc@latest --no-third-party"
           C:/msys64/usr/bin/bash -c "./coinbrew build Cbc --enable-static --disable-shared --enable-msvc --no-prompt --build=x86_64-w64-mingw32 --no-third-party"
