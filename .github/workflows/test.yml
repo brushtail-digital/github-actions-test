@@ -10,4 +10,4 @@ jobs:
     runs-on: windows-latest
     steps:
       - run: |
-          echo $PATH
+          echo $env:PATH
