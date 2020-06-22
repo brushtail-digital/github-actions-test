@@ -16,3 +16,4 @@ jobs:
       - uses: actions/checkout@v2
       - run: |
           powershell ./scripts/msys2 'echo $PATH'
+          echo $PATH
