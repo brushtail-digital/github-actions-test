@@ -1,0 +1,17 @@
+name: Build
+
+on:
+  push:
+    branches: [master]
+
+defaults:
+  run:
+    shell: bash
+    
+jobs:
+  build:
+    name: Test build environment
+    runs-on: windows-latest
+    steps:
+      - run: |
+          C:/msys64/msys2_shell.cmd -no-start -defterm -c 'echo $PATH'
