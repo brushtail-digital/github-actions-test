@@ -14,5 +14,6 @@ jobs:
           repository: 'coin-or/coinbrew'
       - run: |
           "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/Tools/VsDevCmd.bat" 
-          bash -c "./coinbrew build Cbc@latest --enable-msvc --no-prompt --build=x86_64-w64-mingw32"
+          C:/msys64/usr/bin/bash -c "./coinbrew fetch Cbc@latest"
+          C:/msys64/usr/bin/bash -c "./coinbrew build Cbc --enable-msvc --no-prompt --build=x86_64-w64-mingw32"
         shell: cmd
