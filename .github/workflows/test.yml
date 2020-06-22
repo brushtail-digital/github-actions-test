@@ -4,10 +4,6 @@ on:
   push:
     branches: [master]
     
-defaults:
-  run:
-    shell: bash
-
 jobs:
   build:
     name: Test build environment
@@ -15,4 +11,5 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: |
-          powershell ./scripts/msys2 'echo $PATH'
+          echo $PATH
+        shell: ./scripts/msys2 {0}
