@@ -7,3 +7,5 @@ $cmd_str = "`
     C:/msys64/msys2_shell.cmd -defterm -no-start $script";
 
 Start-Process -FilePath $env:COMSPEC -Wait -ArgumentList ("/S", "/C", $cmd_str)
+
+Write-Output "Hello, world"
