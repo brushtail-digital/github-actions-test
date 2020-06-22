@@ -4,10 +4,15 @@ on:
   push:
     branches: [master]
     
+defaults:
+  run:
+    shell: bash
+
 jobs:
   build:
     name: Test build environment
     runs-on: windows-latest
     steps:
+      - uses: actions/checkout@v2
       - run: |
-          echo $env:PATH
+          powershell ./scripts/msys2 'echo $PATH"'
