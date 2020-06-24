@@ -19,3 +19,7 @@ jobs:
     strategy:
       matrix:
         needs: [a, b]
+    steps:
+      - run: echo "Needed $needed"
+        env:
+          needed: ${{ matrix.needs }}
